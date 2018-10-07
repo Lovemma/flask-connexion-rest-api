@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import connexion
 from flask import render_template
 
-# Create the application instance
-app = connexion.App(__name__, specification_dir='./')
+import config
+
+app = config.connex_app
 
 # Read the swagger.yml file to configure the endpoints
 app.add_api('swagger.yml')
